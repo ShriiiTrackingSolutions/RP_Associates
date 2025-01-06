@@ -133,14 +133,14 @@ img {
 .fifthH {
    font-family: 'Plus Jakarta Sans';
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
 .sixthH {
    font-family: 'Plus Jakarta Sans';
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: capitalize;
 }
 
@@ -614,10 +614,10 @@ footer {
   background-color: var(--BgBlack);
   color: #ffffff;
 }
-.footer {
+/* .footer {
   background:linear-gradient( #000000af, #000000af) no-repeat center, url('../image/FooterImg.png') no-repeat center;
   background-size: cover, cover;
-}
+} */
 .footer {
   background-color: rgba(0, 0, 0, 0.71);
   color: white;
@@ -875,13 +875,164 @@ footer {
   border: none;
   outline: 0;
 }
-
-.accordion-button:focus
-
 /* FAQ section end  */
 
 
+/*----------------
+---contact Page-----
+-----------------*/
+
+.NewBanner img{
+  max-height: 400px;
+  object-fit: cover;
+}
 
 
+/* get in touch section start */
 
+.getintouch{
+background-color: #ffffff;
+color: var(--background-color);
+}
+
+.callCards{
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.absoluteAnchor{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.callIcon{
+  margin-right: 8px;
+  width: 30px;
+}
+
+.callInfo span{
+  font-weight: 800;
+  transition: color 0.3s ease-in-out;
+}
+
+.callCards:hover span{
+color: var(--brandHover);
+}
+
+.callRow{
+  margin-top: 30px;
+  justify-content: space-around;
+}
+
+.callIcon img[ alt="email Icon"]{
+  position: relative;
+  transform: translateY(-4px);
+}
+
+.getintouch iframe{
+  margin-top: 50px;
+  min-height: 500px;
+}
+
+.contactForm{
+  background-color: #fff;
+  color: var(--background-color);
+}
+.contactForm label{
+  font-weight: 600;
+}
+.contactForm label span{
+color: var(--hover-primary);
+}
+
+.contactForm textarea{
+  resize: none;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: var(--background-color);
+  outline: 0;
+  box-shadow: 0 0 0 .25rem #00000081;
+}
+
+/* get in touch section end */
+
+
+/*-------------------
+---Services Page-----
+--------------------*/
+
+/* services section  start */
+
+.servicesSection{
+  background-color: #ffffff;
+  color: var(--background-color);
+}
+.servicesSection .container>.row{
+  row-gap: 34px;
+}
+.serviceImg{
+  position: relative;
+}
+
+.hoverLinkData{
+position: absolute;
+padding: 20px;
+top: 0;
+left: 0;
+font-size: 20px;
+opacity: 0;
+text-align: center;
+display: flex;
+align-items: center;
+color: #ffffff;
+background-color: #0000005d;
+height: 100%;
+width: 100%;
+outline: 2px solid #ffffff00;
+outline-offset: -15px;
+transition: opacity 0.4s ease-in-out,outline 500ms 0.2s ease-in-out;
+}
+
+.animate__bounce{
+  transform-style: preserve-3d;
+  animation: swing-in-top-fwd 0.8s cubic-bezier(0.175, 0.885, 0.320, 1.275) 0.3s both;
+}
+
+@keyframes swing-in-top-fwd {
+  0% {
+    -webkit-transform: rotateX(-100deg);
+            transform: rotateX(-100deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+    -webkit-transform-origin: top;
+            transform-origin: top;
+    opacity: 1;
+  }
+}
+
+.serviceCards{
+  perspective: 1200px;
+}
+
+
+.serviceCards:hover .hoverLinkData{
+opacity: 1;
+outline: 2px solid #ffffff;
+color: #ffffff;
+}
+.serviceName a{
+  color: var(--background-color);
+}
+/* services section end */
 

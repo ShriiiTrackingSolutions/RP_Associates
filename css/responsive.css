@@ -100,6 +100,20 @@
   .about-section .container > .row {
     row-gap: 40px;
   }
+
+  
+.callRow{
+  margin-top: 30px;
+  justify-content: start;
+  row-gap: 24px;
+}
+.callCards{
+  display: flex;
+  word-wrap: break-word;
+  word-break: break-all;
+  justify-content: start;
+  position: relative;
+}
 }
 
 @media screen and (max-width: 912px) {
@@ -169,6 +183,18 @@
     max-width: 218px;
     margin: auto;
   }
+
+  .NewBanner img{
+    max-height: unset;
+  }
+  
+  
+  .NewBanner img:not(img[class]) {
+    max-height: unset;
+    min-height: 500px;
+    object-fit: cover;
+  }
+  
 }
 
 
@@ -243,6 +269,16 @@
       background-size: 110% auto;  
     }
   }
+
+
+  .desktopImg{
+   display: block !important;
+  }
+ 
+  .mobileImg{
+   display: none !important;
+  }
+ 
 }
 
 @media only screen and (max-width: 479px) {
