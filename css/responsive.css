@@ -114,6 +114,10 @@
   justify-content: start;
   position: relative;
 }
+
+.serviceDescription .container>.row{
+  row-gap: 50px;
+}
 }
 
 @media screen and (max-width: 912px) {

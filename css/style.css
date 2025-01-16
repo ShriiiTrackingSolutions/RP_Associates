@@ -1,62 +1,10 @@
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('../fonts/PlusJakartaSans-Bold.woff2') format('woff2'),
-      url('../fonts/../fonts/PlusJakartaSans-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 @font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('../fonts/PlusJakartaSans-ExtraBold.woff2') format('woff2'),
-      url('../fonts/PlusJakartaSans-ExtraBold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('../fonts/PlusJakartaSans-Medium.woff2') format('woff2'),
-      url('../fonts/PlusJakartaSans-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('../fonts/PlusJakartaSans-MediumItalic.woff2') format('woff2'),
-      url('../fonts/PlusJakartaSans-MediumItalic.woff') format('woff');
-  font-weight: 500;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('../fonts/PlusJakartaSans-Regular.woff2') format('woff2'),
-      url('../fonts/PlusJakartaSans-Regular.woff') format('woff');
+  font-family: 'Sui Generis Rg';
+  src: url('../fonts/SuiGenerisRg-Regular.woff2') format('woff2'),
+      url('../fonts/SuiGenerisRg-Regular.woff') format('woff');
   font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('../fonts/PlusJakartaSans-Italic.woff2') format('woff2'),
-      url('../fonts/PlusJakartaSans-Italic.woff') format('woff');
-  font-weight: normal;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Plus Jakarta Sans';
-  src: url('../fonts/PlusJakartaSans-SemiBold.woff2') format('woff2'),
-      url('../fonts/PlusJakartaSans-SemiBold.woff') format('woff');
-  font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
@@ -80,7 +28,7 @@
 
 body {
   margin: 0;
-  font-family: 'Plus Jakarta Sans';
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: normal;
   line-height: 29.6px;
   font-style: normal;
@@ -99,47 +47,47 @@ img {
 
 
 .display-3 {
-  font-family: 'Plus Jakarta Sans';
+  font-family: 'Sui Generis Rg', Arial, Helvetica, sans-serif;
   color: var(--primary-color);
-  font-size: 68px;
+  font-size: 62px;
   font-weight: 600;
   margin-bottom: 20px;
   line-height: 68px;
 }
 
 .secH {
-   font-family: 'Plus Jakarta Sans';
-  font-size: 48px;
+   font-family: 'Sui Generis Rg', Arial, Helvetica, sans-serif;
+  font-size: 36px;
   font-weight: 700;
   line-height: 52px;
   margin-bottom: 40px;
 }
 
 .therdH {
-   font-family: 'Plus Jakarta Sans';
-  font-size: 40px;
+   font-family: 'Sui Generis Rg', Arial, Helvetica, sans-serif;
+  font-size: 32px;
   font-weight: 700;
   line-height: 52px;
   margin: 0 0 20px;
 }
 
 .fourthH {
-   font-family: 'Plus Jakarta Sans';
-  font-size: 34px;
+   font-family: 'Sui Generis Rg', Arial, Helvetica, sans-serif;
+  font-size: 24px;
   font-weight: bold;
   text-transform: capitalize;
   line-height: 52px;
 }
 .fifthH {
-   font-family: 'Plus Jakarta Sans';
-  font-size: 20px;
+   font-family: 'Sui Generis Rg', Arial, Helvetica, sans-serif;
+  font-size: 18px;
   font-weight: 600;
   text-transform: capitalize;
 }
 
 .sixthH {
-   font-family: 'Plus Jakarta Sans';
-  font-size: 18px;
+   font-family: 'Sui Generis Rg', Arial, Helvetica, sans-serif;
+  font-size: 16px;
   font-weight: 600;
   text-transform: capitalize;
 }
@@ -380,12 +328,12 @@ transform: translateY(-50%);
 
 #ca1.owl-carousel .item1 {
   background: linear-gradient(#00000073, #00000073), url("../image/BannerImg1.png") no-repeat center;
-  background-size: auto 100%;
+  background-size: 100% auto;
 }
 #ca1.owl-carousel .item2 {
   background:linear-gradient(#00000073, #00000073), url("../image/BannerImg2.png")
     no-repeat center;
-  background-size: auto 100%;
+  background-size: 100% auto;
 }
 
 #ca1.owl-carousel .owl-item.active .item1 {
@@ -397,10 +345,10 @@ transform: translateY(-50%);
 
 @keyframes image-zoom {
   0%  { 
-    background-size: auto 100%; 
+    background-size: 100% auto; 
   }
   100% { 
-    background-size: auto 110%;  
+    background-size: 110% auto;  
   }
 }
 
@@ -466,6 +414,9 @@ transform: translateY(-50%);
 
 #ca1.owl-carousel .item2 .bannerCard {
   margin: auto;
+}
+#ca1.owl-carousel .bannerCard{
+  opacity: 0;
 }
 
 /* whatsapp fab */
@@ -786,6 +737,25 @@ footer {
 .AnchorLink:hover{
   color: var(--brandHover);
 }
+
+
+/* stat number section start */
+
+.stat-number {
+  color: #FFFFFF;
+  font-size: 50px;
+  line-height: 100px;
+  -webkit-text-stroke-width: 1px;
+  stroke-width: 1px;
+  -webkit-text-stroke-color: #FFD700;
+  stroke: #FFD700;
+}
+.stat-text {
+  font-weight: 600;
+  color: #444; /* Grey color for text */
+}
+
+/* stat number section end */
 
 
 /* Google Review Section  */
@@ -1119,3 +1089,75 @@ color: #ffffff;
   position: relative;
   z-index: 3;
 }
+
+
+/*-------------------------
+---Residence spaces page---
+--------------------------*/
+
+.BannerWithText{
+  padding: 182px 30px;
+}
+.BannerWithText .display-3{
+  color: #ffffff;
+  text-align: center;
+}
+
+.BannerWithText.ResidenceSpacesPage0{
+  background: linear-gradient(to right, #0000008e, #0000008e ) no-repeat center, url('../image/ResidentialBanner.png') no-repeat center;
+  background-size: cover, cover;
+}
+
+/* service description section start */
+.serviceDescription{
+  background-color: #ffffff;
+  color: var(--background-color);
+}
+.linklistParent{
+  position: relative;
+}
+.serviceDescription .listLinks{
+  position: sticky;
+  top: 120px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.serviceDescription .btnService{
+  width: 100%;
+}
+
+.btnService{
+  display: inline-block;
+  padding: 10px 20px ;
+  position: relative;
+  background-color: var(--background-color);
+  overflow: hidden;
+  color: #000;
+  transition: all 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+  box-shadow: 0 0 5px 1px #0000002f;
+}
+.btnService span{
+  position: relative;
+  z-index: 2;
+}
+
+.btnService::before{
+  content: '';
+  position: absolute;
+  background: #ffffff;
+  height: 100%;
+  width: 120%;
+  top: 0;
+  left: -10%;
+  transform: skew(30deg);
+  transition: all 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+.btnService:hover::before,.btnService.active::before{
+  transform: translate3d(100%, 0, 0);
+}
+.btnService:hover,.btnService.active{
+  color: #ffffff;
+}
+
+/* service description section end */
