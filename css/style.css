@@ -328,12 +328,12 @@ transform: translateY(-50%);
 
 #ca1.owl-carousel .item1 {
   background: linear-gradient(#00000073, #00000073), url("../image/BannerImg1.png") no-repeat center;
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 #ca1.owl-carousel .item2 {
   background:linear-gradient(#00000073, #00000073), url("../image/BannerImg2.png")
     no-repeat center;
-  background-size: 100% auto;
+  background-size: auto 100%;
 }
 
 #ca1.owl-carousel .owl-item.active .item1 {
@@ -345,10 +345,10 @@ transform: translateY(-50%);
 
 @keyframes image-zoom {
   0%  { 
-    background-size: 100% auto; 
+    background-size:auto 100%; 
   }
   100% { 
-    background-size: 110% auto;  
+    background-size:auto 110%;  
   }
 }
 
