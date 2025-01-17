@@ -620,6 +620,13 @@ transform: translateY(-50%);
 .footer ul li a:hover {
   color: #ffffff;
 }
+.emailSec{
+  min-width: 279px;
+}
+.emailAnchor{
+  display: inline-block;
+  min-width: 240px;
+}
 .footer .contact-info i {
   color: var(--green);
   font-size: 20px;

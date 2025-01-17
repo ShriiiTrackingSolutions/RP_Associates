@@ -2,8 +2,8 @@
   $(function () {
     // WhatsApp URLs for desktop and mobile
     var hrefs = [
-      "https://web.whatsapp.com/send?phone=8511179667", // Desktop
-      "https://api.whatsapp.com/send?phone=8511179667" // Mobile
+      "https://web.whatsapp.com/send?phone=6354710794", // Desktop
+      "https://api.whatsapp.com/send?phone=6354710794" // Mobile
     ];
   
     // Function to update hrefs
