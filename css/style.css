@@ -13,9 +13,10 @@
 *:root{
   --primary-color: #e7e7e7;
   --secondary-color: #f7f7f7;
-  --background-color: #262626;
+  --background-color: #171717;
   --grey:#b6b5b5;
-  --brandPrimary:#00fa9a;
+  --darkGrey: #666666;
+  --brandPrimary:#6d8638;
   --brandHover:#00b6b6;
   --hover-primary: #ff3d4f;
   --hover-secondary: #ffffff;
@@ -97,7 +98,7 @@ img {
 }
 
 header{
-  height: 107px;
+  height: 90.4px;
 }
 
 /* Initial header styling */
@@ -113,7 +114,7 @@ header{
   position: fixed;
   top: -112.48px; /* Hidden initially */
   width: 100%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.829);
   transition: top 0.5s ease; /* Slide down animation */
   animation: slideDown 0.5s ease-in-out both;
 }
@@ -154,10 +155,13 @@ header{
 }
 
 
-
+.bg-dark{
+  background-color: var(--background-color) !important;
+}
 
 .navbar-nav .nav-link{
   font-weight: 600;
+  color: #ffffff;
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
@@ -193,15 +197,20 @@ header{
 .navbar-nav {
   gap: 20px;
 }
+.dropdown-item {
+  color: var(--darkGrey);
+  background-color: transparent;
+}
 .dropdown-item:focus,
 .dropdown-item:hover {
-  color: var(--blue);
+  color: #ffffff;
   background-color: transparent;
 }
 .dropdown-menu {
-  padding: 0;
-  border: none;
+  padding: 8px;
+  border: 1px solid #ffffff13;
   border-radius: 0;
+  background-color: var(--background-color);
   box-shadow: none !important;
 }
 .dropdown-mega .dropdown-menu[data-bs-popper] {
@@ -479,13 +488,13 @@ transform: translateY(-50%);
 }
 
 .about-section{
-  background-color: #ffffff;
+  background-color: var(--background-color);
 }
 .about-section .secH {
- color: var(--background-color);
+ color: #ffffff;
 }
 .about-text p{
-  color: var(--background-color);
+  color: #ffffff;
 }
 
 .about-highlights {
@@ -561,17 +570,12 @@ transform: translateY(-50%);
 /* banner css end */
 
 /* footer section start */
-footer {
-  background-color: var(--BgBlack);
-  color: #ffffff;
-}
-/* .footer {
-  background:linear-gradient( #000000af, #000000af) no-repeat center, url('../image/FooterImg.png') no-repeat center;
-  background-size: cover, cover;
-} */
+
+
 .footer {
-  background-color: rgba(0, 0, 0, 0.71);
-  color: white;
+  background-color: var(--background-color);
+  color: #ffffff;
+  box-shadow: 0 0 15px #000;
 }
 .footer.defaultPadding {
   padding: 80px 0;
@@ -583,9 +587,9 @@ footer {
   margin-bottom: 30px;
 }
 .footer .secH {
-  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-family: 'Sui Generis Rg', Arial, Helvetica, sans-serif;
   font-size: 35px;
-  color: #6eba01 !important;
+  color: #ffffff !important;
   margin-bottom: 35px;
   font-weight: 500;
 }
@@ -594,7 +598,7 @@ footer {
 }
 .exploreLinks a i {
   margin-right: 20px;
-  font-size: 18px;
+  font-size: 15px;
   color: var(--green);
 }
 .footer ul {
@@ -609,11 +613,12 @@ footer {
   margin-bottom: 0;
 }
 .footer ul li a {
-  color: #ffffff;
+  color: var(--darkGrey);
   text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 .footer ul li a:hover {
-  color: var(--green);
+  color: #ffffff;
 }
 .footer .contact-info i {
   color: var(--green);
@@ -668,13 +673,12 @@ footer {
   display: inline-block;
   position: relative;
   padding: 10px 20px;
-  border: var(--background-color) solid 0.15em;
-  border-radius: 8px;
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: #ffffff;
   font-size: 14px;
   font-weight: 600;
   overflow: hidden;
-  transition: border 300ms, color 300ms;
+  transition:   background-color 300ms, color 300ms;
 }
 
 .MediumBtn span {
@@ -682,48 +686,34 @@ footer {
   z-index: 2;
 }
 
-.MediumBtn:hover {
-  color: #ff5a5a;
-  border-color: #ff5a5a;
+.MediumBtn:hover{
+background-color: var(--hover-primary);
+color: #ffffff;
 }
 
 
-.MediumBtn::after, .MediumBtn::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%,-50%);
-  width: 9em;
-  aspect-ratio: 1;
-  background: var(--background-color);
-  opacity: 80%;
-  scale: 1;
-  border-radius: 50%;
-  transition: transform 500ms, background 300ms,scale 500ms;
+.MediumBtnLight{
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: var(--background-color);
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  transition:   background-color 300ms, color 300ms;
 }
 
-.MediumBtn::after{
-  left: -3.7em;
-}
-.MediumBtn::before{
-  right: -3.7em;
-  transform: translate(50%,-50%);
+.MediumBtnLight span {
+  position: relative;
+  z-index: 2;
 }
 
-.MediumBtn:hover:before {
-  transform: translateX(-1em);
-  scale: 4;
+.MediumBtnLight:hover{
+background-color: var(--hover-primary);
+color: #ffffff;
 }
 
-.MediumBtn:hover:after {
-  transform: translateX(1em);
-  scale: 4;
-}
-
-.MediumBtn:active:before,
-.MediumBtn:active:after {
-  background: #000;
-}
 
 
 
@@ -735,7 +725,7 @@ footer {
 }
 
 .AnchorLink:hover{
-  color: var(--brandHover);
+  color: var(--brandPrimary);
 }
 
 
@@ -747,8 +737,8 @@ footer {
   line-height: 100px;
   -webkit-text-stroke-width: 1px;
   stroke-width: 1px;
-  -webkit-text-stroke-color: #FFD700;
-  stroke: #FFD700;
+  -webkit-text-stroke-color: var(--hover-primary);
+  stroke: var(--hover-primary);
 }
 .stat-text {
   font-weight: 600;
@@ -761,20 +751,21 @@ footer {
 /* Google Review Section  */
 
 .googleReview{
-  background-color: #ddeeed;
+  background-color: var(--background-color);
 }
 
 .googleReview .secH{
-  color: var(--background-color);
+  color: #ffffff;
 }
 
 .googleReview {
-  color: var(--background-color);
+  color: var(--darkGrey);
 }
 
 .reviewCards{
   padding: 12px;
-  background-color: #f8fffe;
+  background-color: #303030;
+  color: #ffffff;
   border-radius: 20px;
   transition: color 500ms ease-in-out, background-color 500ms ease-in-out;
 }
@@ -809,7 +800,7 @@ footer {
 
 
 .reviewCards:hover{
-  background-color: var(--background-color);
+  background-color: var(--darkGrey);
   color: #ffffff;
 }
 .reviewCards:hover .review-text{
@@ -920,6 +911,9 @@ color: var(--hover-primary);
 
 .contactForm textarea{
   resize: none;
+}
+.contactForm button{
+  border: none;
 }
 
 .form-control:focus {
@@ -1105,6 +1099,18 @@ color: #ffffff;
 
 .BannerWithText.ResidenceSpacesPage0{
   background: linear-gradient(to right, #0000008e, #0000008e ) no-repeat center, url('../image/ResidentialBanner.png') no-repeat center;
+  background-size: cover, cover;
+}
+.BannerWithText.ContactPage0{
+  background: linear-gradient(to right, #0000008e, #0000008e ) no-repeat center, url('../image/ContactBanner.png') no-repeat center;
+  background-size: cover, cover;
+}
+.BannerWithText.ProjectsPage0{
+  background: linear-gradient(to right, #0000008e, #0000008e ) no-repeat center, url('../image/ProductBanner.png') no-repeat center;
+  background-size: cover, cover;
+}
+.BannerWithText.ServicesPage0{
+  background: linear-gradient(to right, #0000008e, #0000008e ) no-repeat center, url('../image/ServicesBanner.png') no-repeat center;
   background-size: cover, cover;
 }
 

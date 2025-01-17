@@ -122,6 +122,9 @@
 .googleReview .container>.row{
   row-gap: 50px;
 }
+.navbar-nav {
+  gap: 4px;
+}
 }
 
 @media screen and (max-width: 912px) {
@@ -201,6 +204,10 @@
     max-height: unset;
     min-height: 500px;
     object-fit: cover;
+  }
+
+  .BannerWithText{
+    padding: 50px 20px;
   }
   
 }
