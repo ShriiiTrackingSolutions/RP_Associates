@@ -296,9 +296,9 @@
     <script src="js/dynamic.js"></script>
     
 
-    <script>
-      //  Header script
   
+    <script>
+      // Header Script 
       // Debounce function to limit how often the event handler executes
       function debounce(func, delay) {
         let timeout;
@@ -307,7 +307,7 @@
           timeout = setTimeout(() => func.apply(this, args), delay);
         };
       }
-  
+    
       // Header scroll handler
       function handleScroll() {
         const header = document.getElementById("main-header");
@@ -316,25 +316,12 @@
         const belowContent = document.getElementById("headBelowContent");
         const belowContentOffset = belowContent.offsetTop;
         const belowContentHeight = belowContent.offsetHeight;
-  
+    
         if (window.pageYOffset > headerOffset + headerHeight + 5) {
           header.classList.add("sticky-header", "visible");
           header.classList.remove("headerAnimate");
-  
-          if (window.matchMedia("(max-device-width:991.98px)").matches) {
-            document
-              .getElementById("navbarSupportedContent")
-              .setAttribute(
-                "style",
-                "max-height: calc(100vh - 112px); overflow-y: auto;"
-              );
-          } else {
-            if (window.matchMedia("(max-device-width:1199.98px)").matches) {
-              document
-                .getElementById("navbarSupportedContent")
-                .setAttribute("style", "");
-            }
-          }
+    
+          applyNavbarStyles();
         } else {
           if (
             window.pageYOffset <
@@ -345,9 +332,35 @@
           }
         }
       }
-  
-      // Attach debounced scroll event
-      window.addEventListener("scroll", debounce(handleScroll, 0));
+    
+      // Function to handle navbar styles based on layout
+      function applyNavbarStyles() {
+        const navbar = document.getElementById("navbarSupportedContent");
+    
+        if (window.matchMedia("(max-device-width: 991.98px)").matches) {
+          navbar.setAttribute(
+            "style",
+            "max-height: calc(100vh - 112px); overflow-y: auto;"
+          );
+        } else if (window.matchMedia("(max-device-width: 1199.98px)").matches) {
+          navbar.setAttribute("style", "");
+        } else {
+          navbar.setAttribute("style", "");
+        }
+      }
+    
+      // Attach debounced scroll and resize events
+      const debouncedHandleScroll = debounce(handleScroll, 0);
+      const debouncedApplyNavbarStyles = debounce(applyNavbarStyles, 0);
+    
+      window.addEventListener("scroll", debouncedHandleScroll);
+      window.addEventListener("resize", debouncedApplyNavbarStyles);
+    
+      // Run once on page load to ensure styles are applied correctly
+      window.addEventListener("load", () => {
+        debouncedApplyNavbarStyles();
+        debouncedHandleScroll();
+      });
     </script>
 
 
@@ -359,8 +372,9 @@
           margin: 24,
           nav: false,
           dots: false,
-          autoplay: true,
-          autoplayTimeout: 5000,
+          autoplay:true,
+          autoplayTimeout:2000,
+          autoplayHoverPause:true,
           responsive: {
             0: {
               items: 1,
