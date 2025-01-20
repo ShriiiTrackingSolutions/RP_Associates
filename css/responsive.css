@@ -13,6 +13,9 @@
   #ca1.owl-carousel .item2 {
     background-size: 100% auto;
   }
+  #ca1.owl-carousel .item3 {
+    background-size: 100% auto;
+  }
 }
 
 @media (max-width: 1399.98px) {
@@ -74,6 +77,14 @@
   }
   .dropdown-menu li {
     width: 100%;
+  }
+
+  .nav-item:first-of-type{
+    padding-left: 0;
+    position: relative;
+  }
+  .nav-item:first-of-type::after{
+   display: none;
   }
 
   .megaHeding::after {
@@ -209,6 +220,15 @@
   .BannerWithText{
     padding: 50px 20px;
   }
+
+  #ca1.owl-carousel .item2 {
+    background:linear-gradient(#00000073, #00000073), url("../image/BannerMob2.jpeg")
+      no-repeat center;
+  }
+  #ca1.owl-carousel .item3 {
+    background:linear-gradient(#00000073, #00000073), url("../image/BannerMob3.jpeg")
+      no-repeat center;
+  }
   
 }
 
@@ -232,6 +252,9 @@
     background-size:  auto 100%;
   }
   #ca1.owl-carousel .item2 {
+    background-size:  auto 100%;
+  }
+  #ca1.owl-carousel .item3 {
     background-size:  auto 100%;
   }
 
@@ -275,6 +298,9 @@
   #ca1.owl-carousel .item2 {
     background-size:   100% auto;
   }
+  #ca1.owl-carousel .item3 {
+    background-size:   100% auto;
+  }
 
   @keyframes image-zoom {
     0%  { 
@@ -304,6 +330,10 @@
     background-size: cover;  
   }
   #ca1.owl-carousel .item2 {
+    background-size: 100% 100%;
+    background-size: cover;  
+  }
+  #ca1.owl-carousel .item3 {
     background-size: 100% 100%;
     background-size: cover;  
   }

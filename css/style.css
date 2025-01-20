@@ -163,6 +163,10 @@ header{
   font-weight: 600;
   color: #ffffff;
 }
+.navbar-expand-lg .navbar-nav .nav-link{
+  padding-top: 17.37px !important;
+  padding-bottom: 17.37px !important;
+}
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
   color: var(--hover-primary);
@@ -171,6 +175,40 @@ header{
 .nav-link:hover {
   color: var(--hover-primary);
  
+}
+.nav-item:first-of-type{
+  padding-left: 40px ;
+  position: relative;
+}
+.nav-item:first-of-type::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 90.3px;
+  border: 0px solid transparent;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-color: rgb(94 94 86);
+}
+
+.navbar-toggler{
+  position: relative;
+}
+.navbar-toggler::after{
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 90.34px;
+  border: 0px solid transparent;
+  border-left-width: 1px;
+  border-right-width: 1px;
+  border-color: rgb(94 94 86);
 }
 
 
@@ -351,6 +389,17 @@ transform: translateY(-50%);
   animation-delay: 1s;
   animation-fill-mode: both;
 }
+#ca1.owl-carousel .item3 {
+  background: linear-gradient(#00000073, #00000073), url("../image/BannerImg3.png") no-repeat center;
+  background-size: auto 100%;
+}
+
+#ca1.owl-carousel .owl-item.active .item3 {
+  animation-name: image-zoom;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+}
 
 @keyframes image-zoom {
   0%  { 
@@ -424,9 +473,31 @@ transform: translateY(-50%);
 #ca1.owl-carousel .item2 .bannerCard {
   margin: auto;
 }
-#ca1.owl-carousel .bannerCard{
-  opacity: 0;
+
+#ca1.owl-carousel .bannerCard {
+  opacity: 0; /* Default state: visible */
 }
+
+#ca1 .owl-item.active .bannerCard {
+  animation: animate__fadeInUp 1.4s  2s ease both;
+}
+
+@keyframes animate__fadeInUp {
+
+    0% {
+      -webkit-transform: translateY(200px);
+              transform: translateY(200px);
+              opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+              opacity: 1;
+    }
+  
+}
+
+
 
 /* whatsapp fab */
 .fab-container {

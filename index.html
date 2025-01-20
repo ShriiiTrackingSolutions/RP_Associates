@@ -6,20 +6,11 @@
     <link rel="icon" type="image/x-icon" href="image/Fevicon.png" />
     <title>RP Associates</title>
 
-    <link
-      fetchpriority="high"
-      rel="preload"
-      href="image/BannerImg1.png"
-      as="image"
-      type="image/png"
-    />
-    <link
-      fetchpriority="high"
-      rel="preload"
-      href="image/BannerImg2.png"
-      as="image"
-      type="image/png"
-    />
+    <link fetchpriority="high" rel="preload"  href="image/BannerImg1.png" as="image" type="image/png" />
+    <link fetchpriority="high" rel="preload" href="image/BannerImg2.png" as="image" type="image/png"/>
+    <link fetchpriority="high" rel="preload" href="image/BannerImg3.png" as="image" type="image/png"/>
+    <link fetchpriority="high" rel="preload" href="image/BannerMob2.jpeg" as="image" type="image/jpeg"/>
+    <link fetchpriority="high" rel="preload" href="image/BannerMob3.jpeg" as="image" type="image/jpeg"/>
 
     <!-- Preload -->
     <link rel="preload" as="style" href="css/bootstrap.min.css" />
@@ -62,10 +53,10 @@
         <div id="ca1" class="owl-carousel owl-theme text-center">
           <div class="item item1">
             <div class="row">
-              <div class="bannerCard animate__animated animate__delay-1s">
+              <div class="bannerCard ">
                 <div class="bannertext1 px-3">
                   <h1 class="display-3">
-                    <a href="">Elegant Furniture Solutions </a>
+                    <a href="">Commitment, Process & Handover</a>
                   </h1>
                   <p>
                     At RP Associates, we design and create furniture that blends
@@ -81,10 +72,10 @@
 
           <div class="item item2">
             <div class="row">
-              <div class="bannerCard animate__animated animate__delay-1s">
+              <div class="bannerCard ">
                 <div class="bannertext1 px-3">
                   <h1 class="display-3">
-                    <a href="">Modern Living, Crafted to Perfection</a>
+                    <a href="">Where Luxury meets Functionality</a>
                   </h1>
                   <p>
                     Explore our exclusive range of modern furniture, designed to
@@ -97,6 +88,26 @@
               </div>
             </div>
           </div>
+          
+          <div class="item item3">
+            <div class="row">
+              <div class="bannerCard ">
+                <div class="bannertext1 px-3">
+                  <h1 class="display-3">
+                    <a href="">Nature blending in Modernism</a>
+                  </h1>
+                  <p>
+                    Explore our exclusive range of modern furniture, designed to
+                    suit every lifestyle and home.
+                  </p>
+                </div>
+                <a class="btnOutline fourthH" href="tel:"
+                  >Call Now <i class="fa-solid fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -600,60 +611,23 @@
         // const prevBtn = `<i class="fa-solid fa-arrow-left"></i> Prev`;
         // const nextBtn = `Next <i class="fa-solid fa-arrow-right"></i>`;
 
-        $("#ca1").owlCarousel({
-          loop: true,
-          margin: 0,
-          nav: true,
-          dots: true,
-          dotsEach: 1,
-          animateOut: "fadeOut",
-          autoplay:true,
-          autoplayTimeout:6000,
-          autoplayHoverPause:true,
-          smartSpeed:450,
-          responsive: {
-            0: {
-              items: 1,
-            },
-            600: {
-              items: 1,
-            },
-            1000: {
-              items: 1,
-            },
-          },
-          onTranslated: function () {
-            animateActiveItem();
-          },
-          onInitialized: function () {
-            animateActiveItem();
-          },
-        });
+   $("#ca1").owlCarousel({
+  loop: true,
+  margin: 0,
+  nav: true,
+  dots: true,
+  dotsEach: 1,
+  animateOut: "fadeOut",
+  autoplay: true,
+  autoplayTimeout: 6000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: { items: 1 },
+    600: { items: 1 },
+    1000: { items: 1 },
+  }
+});
 
-        function animateActiveItem() {
-          const CarouselItems = document.querySelectorAll(
-            "#ca1 .owl-item .bannerCard"
-          );
-
-          CarouselItems.forEach((item) => {
-            // Remove the animation class before adding it again
-            item.classList.remove("animate__fadeInUp");
-          });
-
-          const activeItem = document.querySelector(
-            "#ca1 .owl-item.active .bannerCard"
-          );
-          if (activeItem) {
-            activeItem.classList.add("animate__fadeInUp");
-          }
-        }
-
-        // Trigger animation when clicking nav buttons
-        document
-          .querySelectorAll(".Banner .owl-carousel .owl-nav button")
-          .forEach((button) => {
-            button.addEventListener("click", animateActiveItem);
-          });
     </script>
 
     <!-- Owl Carousel Initialization -->
