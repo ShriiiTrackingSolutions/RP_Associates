@@ -701,7 +701,7 @@ transform: translateY(-50%);
   margin: auto;
 }
 .footer .exploreLinks ul {
-  max-width: 132px !important;
+  max-width: 143px !important;
   margin: auto;
 }
 
@@ -752,8 +752,9 @@ transform: translateY(-50%);
 .footer .social-icons {
   display: flex;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
   margin-top: 20px;
-  padding-left: 40px;
 }
 .footer .social-icons a {
   display: flex;
@@ -764,7 +765,6 @@ transform: translateY(-50%);
   align-items: center;
   color: white;
   font-size: 17px;
-  margin-right: 15px;
 }
 .footer .social-icons a:hover {
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
