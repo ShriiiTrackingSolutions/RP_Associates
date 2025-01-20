@@ -215,6 +215,7 @@
     margin: auto;
   }
   .footer .exploreLinks ul {
+    width: 143px ;
     max-width: 143px !important;
     margin: auto;
   }
