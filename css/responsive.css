@@ -201,12 +201,21 @@
   .footer .locationLink{
     max-width: 200px;
   }
-  .footer ul {
+  .footer ul:not(.footer .exploreLinks1 ul) {
     max-width: 257px;
     margin: auto;
   }
+  .footer .exploreLinks1 ul{
+    max-width: 352px; 
+  }
+  .footer .exploreLinks1 ul li{
+    text-align: left;
+    }
+  .footer .exploreLinks1 ul {
+    margin: auto;
+  }
   .footer .exploreLinks ul {
-    max-width: 132px;
+    max-width: 132px !important;
     margin: auto;
   }
 
