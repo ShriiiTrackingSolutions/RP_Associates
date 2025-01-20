@@ -202,7 +202,11 @@
     max-width: 200px;
   }
   .footer ul {
-    max-width: 218px;
+    max-width: 257px;
+    margin: auto;
+  }
+  .footer .exploreLinks ul {
+    max-width: 132px;
     margin: auto;
   }
 
