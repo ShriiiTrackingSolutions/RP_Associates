@@ -136,6 +136,18 @@
 .navbar-nav {
   gap: 4px;
 }
+
+.navbar > .container{
+  justify-content: center;
+}
+.navbar-toggler{
+  margin-right: 40px;
+}
+.navbar-brand {
+margin-left: auto;
+margin-right: auto;
+}
+
 }
 
 @media screen and (max-width: 912px) {
@@ -243,6 +255,10 @@
     background:linear-gradient(#00000073, #00000073), url("../image/BannerMob3.jpeg")
       no-repeat center;
   }
+
+  .projectBtn a {
+    padding: 8px 18px;
+}
   
 }
 

@@ -176,40 +176,8 @@ header{
   color: var(--hover-primary);
  
 }
-.nav-item:first-of-type{
-  padding-left: 40px ;
-  position: relative;
-}
-.nav-item:first-of-type::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5px;
-  height: 90.3px;
-  border: 0px solid transparent;
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-color: rgb(94 94 86);
-}
 
-.navbar-toggler{
-  position: relative;
-}
-.navbar-toggler::after{
-  content: "";
-  position: absolute;
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 5px;
-  height: 90.34px;
-  border: 0px solid transparent;
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-color: rgb(94 94 86);
-}
+
 
 
 .dropend .dropdown-toggle::after {
@@ -360,7 +328,7 @@ header{
 #ca1.owl-carousel .item {
   padding: 80px 12px;
   background-color: red;
-  height: calc(100vh - 106px);
+  height: calc(100vh - 90.4px);
   position: relative;
 }
 
@@ -1128,7 +1096,7 @@ color: #ffffff;
 }
 
 .projectCard img {
-  aspect-ratio: 16/24;
+  aspect-ratio: 4/3;
   object-fit: cover;
   border-radius: 15px 15px 15px 15px;
   box-shadow: 8px 8px 30px -3px rgba(0, 0, 0, 0.45);
